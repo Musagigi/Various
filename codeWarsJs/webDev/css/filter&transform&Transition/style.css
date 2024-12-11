@@ -1,0 +1,94 @@
+.img1 {
+    transition: all 1s ease;
+}
+
+.img1:hover {
+    /* filter: blur(5px); */
+    /* filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.5)); */
+    /* filter: grayscale(50%) */
+    /* filter: brightness(150%);s */
+    /* filter: contrast(150); */
+    /* filter: hue-rotate(50deg); */
+    /* filter: invert(100%); */
+    /* filter: saturate(165%) */
+    /* filter: opacity(50%); */
+    filter: blur(2px) brightness(150%);
+}
+
+.wrapper {
+    border: 2px solid black;
+    display: inline-block;
+
+    /* overflow: hidden; */
+}
+
+.img2 {
+    transition: all 1s ease; 
+    /* transform-origin: 20px 280px; */ /* опорная точка для трансформаций  */
+}
+
+.img2:hover {
+    transform: rotate(180deg);
+    /* transform: scale(1.2); */
+    /* transform: scale(0.2, 1.3); */
+    /* transform: scaleX(1.2); */
+    /* transform: translate(50px, 80px); */
+    /* transform: skew(21deg, 21deg); */
+    /* transform: rotate(-25deg) scale(1.2) skew(25deg, 25deg); */
+}
+
+
+.examp {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    display: inline-block;
+
+    transition-duration: 500ms, 2s;
+    /* с помощью transition-property можно выделять
+        какие св-ва будут задействованы, если all,
+        то будут применяться ко всем Ховерам */
+    transition-property: transform, background-color;
+    transition-delay: 0, 500ms;
+    transition-timing-function: linear;
+
+    /* можно заменить все одим св-вом */
+    /* transition: all 1s ease .5s */
+}
+.examp:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+
+.examp2 {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+
+    /* animation-name: myAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-delay: 3s; */
+    animation: bgChange 2s infinite, sizeChange 3s infinite ;
+}
+.examp2:hover {
+    animation-play-state: paused;
+}
+
+@keyframes bgChange {
+    from {background-color: aqua;}
+    50% {background-color: red;}
+    to {background-color: green;}
+}
+
+@keyframes sizeChange {
+    form {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    to {transform: scale(1);}
+}

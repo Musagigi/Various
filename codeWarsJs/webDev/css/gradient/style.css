@@ -1,0 +1,23 @@
+body {
+    background-color: blue;
+}
+
+.wrapper {
+    height: 500px;
+    width: 500px;
+    /* background-image: linear-gradient(90deg, black, white); */
+    /* background: linear-gradient(90deg, black, white); */
+    /* background: linear-gradient(to bottom right, black, white); */
+    /* background: linear-gradient(to bottom, black, white); */
+
+    /* transparent - Добавляет прозрачность */
+    /* background: linear-gradient(90deg, black, red, transparent); */
+    
+    /* опорные точки */
+    /* background: linear-gradient(90deg, black, red, blue, aqua, green, black); */
+    /* background: linear-gradient(90deg, black 15%, red 50%, green 75%); */
+    /* background: linear-gradient(90deg, black 25%, red 25%, red 50%, black 50%, black 75%, red 75%); */
+    /* background: repeating-linear-gradient(90deg, black 25px, red 25px, black 50px, red 50px, black 75px, red 75px); */
+    /* background: radial-gradient(circle, red 50%, black 30%) */
+    background: radial-gradient(circle, red, black)
+} 

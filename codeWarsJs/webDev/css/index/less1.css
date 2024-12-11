@@ -1,0 +1,110 @@
+@import 'main.css';
+
+/* * - селектор звездочка, применяет стили 
+    ко всем элементам на странице */
+
+/* Pseudo-elements & Pseudo-classes */
+.testLink {
+    color: black;
+    text-decoration: none;
+}
+
+.testLink:hover {
+    color: red;
+}
+
+.testLink:active {
+    color: blue;
+}
+
+/* Pseudo-elements */
+.test::before {
+    content: 'This is Before ';
+    text-transform: uppercase;
+}
+
+.test::after {
+    content: ' This is After';
+    color: red;
+}
+
+.list li:nth-child(even) {
+    color: red;
+}
+.list li:nth-child(odd) {
+    color: blue;
+}
+.list li:nth-child(1) {
+    color: green;
+}
+
+.div {
+    border: 1px solid red;
+}
+.div2 {
+    border: 1px solid red;
+    display: inline;
+}
+
+.a {
+    border: 1px solid red;
+}
+.a2 {
+    border: 1px solid red;
+    display: block;
+}
+
+/* box-sizing: border-box; - 
+    ужимает все в у казанные размеры
+    без него учитывает все PX и width и height
+    будут больше, чем заданы
+    */
+.mar {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    padding: 10px;
+    border: 10px solid red;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+h4 {
+    border: 1px solid black;
+}
+.testing {
+    border: 10px solid red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+
+/* position: absolute; - без родителя h3
+    в котором position: relative;
+    absolute Будет двигаться относительно документа
+    а так будет относительно родителя
+    в котором находится */
+h3 {
+    border: 1px solid black;
+    position: relative;
+}
+.testing2 {
+    border: 10px solid red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+
+.editText {
+    text-align: justify;
+    text-indent: 40px;
+    text-transform: uppercase;
+}

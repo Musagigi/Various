@@ -1,0 +1,87 @@
+.example {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+}
+.example2 {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border-width: 15px;
+    border-style: dashed;
+    border-color: red;
+}
+.example3 {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border-width: 5px;
+    border-style: dotted;
+    border-color: red;
+}
+.example4 {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border-width: 15px;
+    border-style: double;
+    border-color: red;
+}
+.example5 {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border-width: 10px;
+    border-style: ridge;
+    border-color: red;
+    box-shadow: inset 0px 20px 5px aqua
+}
+.example6 {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border: 10px solid yellow;
+    border-right-style: none;
+    border-bottom-width: 20px;
+    border-left-color: red;
+    box-shadow: 20px 30px 10px black, -30px -30px 1px black
+}
+.example6 {
+    outline: 10px solid black;
+}
+
+button:focus,
+input:focus {
+    outline: 2px solid aqua
+}
+
+h1 {
+    text-shadow: 5px 15px 5px red;
+}

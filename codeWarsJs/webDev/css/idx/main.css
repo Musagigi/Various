@@ -1,0 +1,26 @@
+.h2 {
+    color: red;
+}
+
+.modal {
+    border: 2px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: aqua;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 прозрачность */
+    color: white;
+    width: 1000vw; /* из-за vw, vh покрывает всю область*/
+    height: 100vh;
+    box-sizing: border-box;
+    position: absolute; /* position играет роль, из-за этого на весь документ */
+    top: 0;
+    left: 0;
+}

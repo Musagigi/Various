@@ -1,0 +1,128 @@
+.section-cards {
+	padding: 15px 0;
+}
+
+.user-card {
+	border: 1px solid #f00;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+		"header header header"
+		"pic slogan slogan"
+		"pic actions actions";
+	gap: 10px;
+}
+
+.user-header {
+	grid-area: header;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__names {
+		font-size: 30px;
+	}
+
+	&__rating {
+		font-size: 26px;
+	}
+}
+
+.main-info__pic {
+	grid-area: pic;
+	img {
+		display: block;
+	}
+}
+
+.user-descr__slogan {
+	grid-area: slogan;
+	font-style: italic;
+}
+
+.user-descr__actions {
+	grid-area: actions;
+	align-self: end;
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	gap: 15px;
+}
+
+.user-descr__btn {
+	border-radius: 0;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	background: #f90;
+	padding: 10px 5px;
+}
+
+@media screen and (max-width: 710px) {
+	.user-card {
+		grid-template-columns: minmax(130px, 25%) 1fr;
+		grid-template-areas:
+			"pic header header"
+			"slogan slogan slogan"
+			"actions actions actions";
+	}
+
+	.user-header {
+		flex-direction: column;
+		align-items: end;
+
+		&__names {
+			font-size: 25px;
+		}
+
+		&__rating {
+			font-size: 22px;
+		}
+	}
+}
+
+@media screen and (max-width: 535px) {
+	.user-card {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto 93px;
+		grid-template-areas:
+			"header header header"
+			"slogan slogan slogan"
+			"pic actions actions";
+	}
+
+	.user-header {
+		align-items: center;
+		row-gap: 10px;
+	}
+
+	.main-info__pic img {
+		max-height: 100%;
+	}
+
+	.user-descr__actions {
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.user-card {
+		grid-template-columns: none;
+		grid-template-rows: none;
+		grid-template-areas:
+			"header"
+			"slogan"
+			"pic"
+			"actions";
+	}
+
+	.user-header {
+		text-align: center;
+	}
+
+	.main-info__pic img {
+		width: 100%;
+	}
+}

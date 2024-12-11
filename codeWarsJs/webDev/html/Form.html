@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- атрибут action указывает вкакой файл, отправляются данные из этой Формы -->
+    <!-- autocomplete если уже писали что-то туда, то автозаполняет, как будт форма с паролем -->
+    <form action="formHandler.js" name="simple form" autocomplete="on">
+        что-то
+    </form>
+    <hr>
+
+    <form action="formHandler.js" name="simple form2">
+        <!-- fieldset разбивает форму на несколько полей -->
+        <fieldset>
+            <legend>Легенда формы</legend>
+            <input type="text">
+            <br>
+            <select>
+                текст
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Какой-то текст</legend>
+        </fieldset>
+    </form>
+    <hr>
+
+    <form action="formHandler.js" name="simple form3">
+        <!-- через for и id подвязываем input к label -->
+        <label for="username">введите имя</label>
+        <input id="username">
+    </form>
+    <hr>
+
+    <form action="formHandler.js" name="simple form4">
+        <fieldset>
+            <legend>Персональные данные</legend>
+            <label for="name">Введите имя</label>
+            <input type="text" id="name"> 
+        </fieldset>
+        <fieldset>
+            <legend>Ваше обращение</legend>
+            <label for="message" >Форма для обращения</label>
+            <br>
+            <textarea id="message" rows="10" cols="45" name="text" placeholder="Введите текст"></textarea>
+        </fieldset>
+    </form>
+    <hr>
+    <!-- spellcheck проверят орфографические ошибки -->
+    <textarea rows="5" cols="20" name="test" spellcheck="true"></textarea>
+    <br>
+    <textarea rows="5" cols="20" autofocus></textarea>
+    <br>
+    <textarea rows="5" cols="20" disabled></textarea>
+    <br>
+    <textarea rows="2"  cols="10" readonly>Этот текст  можно только читать</textarea>
+    <br>
+    <textarea rows="5" cols="15" maxlength="5" ></textarea>
+    <br>
+    <!-- required поле должно быть обязательно заполнено -->
+    <form>
+        <textarea rows="5" cols="15" required></textarea>
+        <br>
+        <input type="submit" value="send">
+    </form>
+    <hr>
+
+    <select>
+         <option value="front-end">Фронт</option>
+         <option value="back-end">Бек</option>
+    </select>
+    <hr>
+    <select multiple>
+        <option value="front-end">Фронт</option>
+        <option value="back-end">Бек</option>
+    </select>
+</body>
+</html>

@@ -1,0 +1,74 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.body{
+    max-width: 1920px; 
+    margin: 0 auto;
+}
+
+.unit1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.unit2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+}
+
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.unit3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.unit4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.button2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.button3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.input2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
+
+.unit5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 63, 63);
+    margin-bottom: 2px;
+}
