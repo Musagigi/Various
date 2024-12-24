@@ -102,6 +102,7 @@ type MyExclude<U, Exc> = U extends Exc ? never : U;
 
 type Excluded = MyExclude<Union, "c">;
 
+// уже есть нативныйExclude
 // Мы можем разложить это по полочкам следующим образом:
 // 1. Может ли "a" быть присвоено (в данном случае равно) "c"? Нет. Возвращает "a".
 // 2. Может ли "b" быть присвоено "c"? Нет. Возвращает "b".
@@ -113,3 +114,63 @@ type Excluded = MyExclude<Union, "c">;
 // ------------------------------------------------------- //
 // Awaited
 // https://typehero.dev/challenge/awaited
+// как получить тип из ExampleType если он обернут в Promise
+// можно было написать свой Awaited, но хз, есть уже готовый Awaited
+type MyAwaited<T> = Awaited<T>
+
+type ExampleType = Promise<string>
+type Y = Promise<{ field: number }>
+type Z = Promise<Promise<string | number>>
+type Z1 = Promise<Promise<Promise<string | boolean>>>
+type T = { then: (onfulfilled: (arg: number) => any) => any }
+
+
+type Result = MyAwaited<ExampleType> // string
+type ResultX = MyAwaited<Y> // { field: number }
+// и т.д.
+// ------------------------------------------------------- //
+
+
+
+// ------------------------------------------------------- //
+// Concat
+// https://typehero.dev/challenge/concat
+type Concat<T extends readonly unknown[], U extends readonly unknown[]> = [...T, ...U]
+const tupleConcat = [1] as const
+
+type ResultConcat = Concat<[1], [2]> // expected to be [1, 2]
+type ResultConcat2 = Concat<[], [1]>
+type ResultConcat3 = Concat<[], []>
+type ResultConcat4 = Concat<typeof tupleConcat, typeof tupleConcat>
+type ResultConcat5 = Concat<[1, 2], [3, 4]>
+type ResultConcat6 = Concat<['1', 2, '3'], [false, boolean, '4']>
+// ------------------------------------------------------- //
+
+
+
+// ------------------------------------------------------- //
+// If
+// https://typehero.dev/challenge/if
+type If<Condition extends boolean, T, F> = Condition extends true ? T : F
+
+
+type IfErr = If<null, 'a', 2> // expected err
+type IfA = If<true, 'a', 'b'>  // expected to be 'a'
+type IfB = If<false, 'a', 'b'> // expected to be 'b'
+type IfC = If<boolean, 'a', 2> // expected 2 | 'a'
+/*
+В TypeScript, когда вы используете условные типы с обобщениями, 
+которые могут принимать несколько значений (например, boolean), 
+результатом будет объединение всех возможных типов, 
+которые могут быть возвращены в зависимости от условий. 
+Поэтому IfC возвращает 2 | 'a'.
+*/
+// ------------------------------------------------------- //
+
+
+
+// ------------------------------------------------------- //
+// Includes
+// https://typehero.dev/challenge/includes
+
+// ------------------------------------------------------- //
